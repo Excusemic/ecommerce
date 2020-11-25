@@ -6,7 +6,7 @@ import { products_url as url, single_product_url } from "../utils/constants"
 const initialState = {
   products: [],
   featured: [],
-  products_loading: false,
+  products_loading: true,
   products_error: false,
   single_product: null,
   single_product_loading: false,
