@@ -1258,6 +1258,7 @@ ul h4 {
     display: block;
   }
   .menu {
+    font-size: 2em;
     display: block;
   }
   .welcome-content .right-side {
@@ -1322,6 +1323,9 @@ ul h4 {
     background-color: #4b0803;
     color: #fff;
   }
+  nav {
+    width: 95%;
+  }
   .nav-overlay {
     display: block;
     transform: translateX(-100%);
@@ -1343,6 +1347,7 @@ ul h4 {
   .custom-content .lower {
     flex-wrap: wrap;
     width: 95%;
+    margin: auto;
   }
   .custom-content .lower .card {
     margin-bottom: 1.2em;
