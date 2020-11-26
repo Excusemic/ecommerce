@@ -53,14 +53,14 @@ const CartItem = ({ name, color, image, price, amount, stock, shipping }) => {
               </div>
             </div>
           </div>
-          <div className="price">{formatPrice(price)}</div>
+          <div className="price">price: {formatPrice(price)}</div>
           <div className="quantity">
             <button onClick={() => handleClick("-")}>-</button>
             <p>{itemAmount}</p>
             <button onClick={() => handleClick("+")}>+</button>
           </div>
           <div className="subtotal">
-            <p>{formatPrice(amount * price)}</p>
+            <p>total: {formatPrice(amount * price)}</p>
             {shipping && (
               <p style={{ position: "absolute", bottom: "-10px", color: "green" }}>
                 Free shipping!

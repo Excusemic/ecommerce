@@ -4,6 +4,7 @@ import { getUniqueValue, formatPrice } from "../utils/functions"
 
 const Filters = () => {
   const { changeFilters, all_products } = useFilterContext()
+  const [isOpen, setIsOpen] = useState(false)
   const [filters, setFilters] = useState({
     name: "",
     category: "all",
@@ -52,20 +53,22 @@ const Filters = () => {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column" }} className="categories">
-        <h4>Category</h4>
-        {allCategories.map((elem, index) => {
-          return (
-            <p
-              className={elem === filters.category ? "select-category" : null}
-              key={elem}
-              style={{ margin: ".3em 0em" }}
-              value="category"
-              onClick={(e) => updateFilters(e.target.getAttribute("value"), elem)}
-            >
-              {elem}
-            </p>
-          )
-        })}
+        <h4 onClick={() => setIsOpen(!isOpen)}>Category &#8595; </h4>
+        <div className={isOpen ? "categories-p categories-p-open " : "categories-p "}>
+          {allCategories.map((elem, index) => {
+            return (
+              <p
+                className={elem === filters.category ? "select-category" : null}
+                key={elem}
+                style={{ margin: ".3em 0em" }}
+                value="category"
+                onClick={(e) => updateFilters(e.target.getAttribute("value"), elem)}
+              >
+                {elem}
+              </p>
+            )
+          })}
+        </div>
       </div>
       <div className="companies-container">
         <h4>Company</h4>
