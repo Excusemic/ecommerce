@@ -1251,6 +1251,16 @@ ul h4 {
 .mobile-cart {
   display: none;
 }
+.inner-slider .image-container {
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.slider .overlay {
+  border-radius: 5px;
+}
+.slider .grid-product img {
+  border-radius: 5px;
+}
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 820px) {
